@@ -1,7 +1,6 @@
 // Find the least number of hops needed to get from ID=1 to ID=15 using the array
 // tuple provided below. For example, to get from ID=1 to ID=4 will require 2 hops
 // – [1,3] follow by [3,4].
-
 void main() {
   var x = [
     [1, 2],
@@ -32,6 +31,8 @@ void main() {
   Wrapper wrapper = new Wrapper();
   DFS(mapper, 1, 1, 15, wrapper);
   print(wrapper.nums);
+  wrapper.nums.sort();
+  print("least number of hops: ${wrapper.nums[0]}");
 }
 
 class Wrapper {
